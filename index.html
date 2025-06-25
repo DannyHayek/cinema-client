@@ -7,26 +7,40 @@
     <link rel="stylesheet" href="./styles/global.css"/>
     <script src="./scripts/index.js" defer></script>
     <title>Panorama Cinemas - Home Page</title>
+    <link rel="icon" type="image/x-icon" href="./assets/panorama_icon.png">
 </head>
 <body>
     <header class="light-font">
-        <h1 class="landing-heading-1">PANORAMA</h1>
+        <!-- <h1 class="landing-heading-1">PANORAMA</h1> -->
+        <img class="landing-logo" src="./assets/panorama_logo_trans.png" alt="PANORAMA Logo">
         <h3 class="landing-heading-2">Your View Into Other Worlds</h3>
     </header>
 
     <main class="flex flex-center">
-        <aside class="landing-image-aside-left">
-            <img class="landing-image" src="">
-        </aside>
+        <aside class="landing-image-aside-left"></aside>
 
         <section class="flex column flex-space-evenly landing-buttons-section">
-            <button class="dark-button blue-font landing-button">LOG IN</button>
-            <button class="light-button dark-font landing-button">SIGN UP</button>
+
+            <div class="flex column flex-space-between login-form">
+
+                <form class="flex flex-center column forms-div">
+                    <label class = "light-font form-label">Username</label>
+                    <input id = "username" class = "user-pass-input form-field" type="text">
+                    <label class = "light-font form-label">Password</label>
+                    <input id = "password" class = "user-pass-input form-field" type="password">
+                </form>
+
+                <button class="dark-button blue-font landing-button login-btn" id="login-button">LOG IN</button>
+            </div>
+
+            <div class="buttons-div flex flex-center column">
+                <h4 class="landing-heading-4 light-font">Don't have an account?</h4>
+                <button class="light-button dark-font landing-button register-btn" id="signup-button">SIGN UP</button>
+            </div>
+
         </section>
 
-        <aside class="landing-image-aside-right">
-            <img class="landing-image" src="">
-        </aside>
+        <aside class="landing-image-aside-right"></aside>
 
     </main>
     <footer class="flex flex-center footer-background">

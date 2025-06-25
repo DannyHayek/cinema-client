@@ -1,7 +1,7 @@
 header {
     max-width: 100dvw;
     text-align: center;
-    padding: 10% min(8%, 4em);
+    padding: min(8%, 4em);
     max-height: 150px;
 }
 
@@ -9,12 +9,24 @@ header {
     font-size: clamp(3em, 10vw, 5em);
 }
 
+.landing-logo {
+    height: auto;
+    max-width: 100%;
+}
+
 .landing-heading-2 {
     font-size: clamp(1.4em, 5.5vw, 2.5em);
 }
 
+.landing-heading-4 {
+    font-size: clamp(1.1em, 4.5vw, 2em);
+    padding-top: 1em;
+    text-align: center;
+}
+
 main {
-    height: 60dvh;
+    height: 70dvh;
+    min-height: 50dvh;
 }
 
 .landing-buttons-section {
@@ -36,6 +48,14 @@ main {
     border-radius: 8%;
 }
 
+.login-btn {
+    margin: 2em 0em 2em 0em;
+}
+
+.register-btn {
+    margin: 2em 0em 2em 0em;
+}
+
 .landing-image-aside-right {
     width: 50%;
     height: 100%;
@@ -49,8 +69,26 @@ main {
     background-image: -webkit-linear-gradient(left, rgba(39, 44, 55, 0.5) 20%, rgba(39, 44, 55, 0.6) 50%, rgba(39, 44, 55, 0.7) 80%, rgba(39, 44, 55, 0.9) 90%, rgba(39, 44, 55, 0.99) 100%), url(../assets/how_to_train_your_dragon.jpg);
 }
 
-.landing-image {
+.forms-div {
+    gap: 1.3em;
+}
 
+.form-label {
+    font-size: 2rem;
+}
+
+.form-field {
+    min-width: 4rem;
+    max-width: 10rem;
+    border-radius: 6%;
+    background-color: rgba(39, 44, 55, 1);
+    height: 2em;
+    color: whitesmoke;
+}
+
+.login-form {
+    border-bottom: 1px solid;
+    border-color: whitesmoke;
 }
 
 footer {
