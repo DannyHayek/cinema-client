@@ -2,13 +2,45 @@ header {
     max-width: 100dvw;
     /* font-size: 150%; */
     text-align: center;
-    padding: min(8%, 4em)
+    padding: min(8%, 4em);
+    margin-top: min(6%, 2em);
+    max-height: 20dvh;
 }
 
 .landing-heading-1 {
-    font-size: clamp(3rem, 10vw, 5rem);
+    font-size: clamp(3em, 10vw, 5em);
 }
 
 .landing-heading-2 {
-    font-size: clamp(1.4rem, 5.5vw, 2.5rem);
+    font-size: clamp(1.4em, 5.5vw, 2.5em);
+}
+
+main {
+    min-height: 70dvh;
+    max-height: 70dvh;
+}
+
+.landing-buttons-section {
+    max-width: 40dvw;
+    min-width: 30dvw;
+    height: 50dvh;
+}
+
+.landing-button {
+    max-width: 20em;
+    width: 70%;
+    min-width: 8em;
+    max-height: 20rem;
+    min-height: 3rem;
+    border: 3px;
+    border-style: groove;
+    border-radius: 8%;
+}
+
+.landing-image-section {
+
+}
+
+.landing-image {
+    background-image: linear-gradient(red, darkblue);
 }

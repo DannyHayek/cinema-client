@@ -37,6 +37,43 @@ body {
 }
 
 .light-font {
-    color: white;
+    color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.blue-font {
+    color: #5D83BD;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dark-font {
+    color: #272C37;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.light-button {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.light-button:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+.blue-button {
+    background-color: #5D83BD;
+    cursor: pointer;
+}
+
+.blue-button:hover {
+    background-color: #94b9f1;
+}
+
+.dark-button {
+    background-color: #272C37;
+    cursor: pointer;
+}
+
+.dark-button:hover {
+    background-color: #1e2025;
 }
