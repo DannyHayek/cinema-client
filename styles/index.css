@@ -74,7 +74,8 @@ main {
 }
 
 .form-label {
-    font-size: 2rem;
+    font-size: 1.3rem;
+    text-align: center;
 }
 
 .form-field {
@@ -89,6 +90,10 @@ main {
 .login-form {
     border-bottom: 1px solid;
     border-color: whitesmoke;
+}
+
+.signup-form {
+    display: none !important;
 }
 
 footer {
