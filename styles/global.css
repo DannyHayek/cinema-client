@@ -4,9 +4,9 @@
 }
 
 body {
-    max-width: 100dvw;
+    /* max-width: 100dvw;
     min-width: 50dvw;
-    min-height: 100dvh;
+    min-height: 100dvh; */
     background-color: #272C37;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .dark-font {
-    color: #272C37;
+    color: rgb(39, 44, 55);
     font-family: 'Courier New', Courier, monospace;
 }
 
