@@ -1,0 +1,14 @@
+header {
+    max-width: 100dvw;
+    /* font-size: 150%; */
+    text-align: center;
+    padding: min(8%, 4em)
+}
+
+.landing-heading-1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+}
+
+.landing-heading-2 {
+    font-size: clamp(1.4rem, 5.5vw, 2.5rem);
+}
