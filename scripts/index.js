@@ -8,6 +8,16 @@ const loginSwapBtn = document.getElementById("login-swap-btn");
 const loginDiv = document.getElementById("loginDiv");
 const signupDiv = document.getElementById("signupDiv");
 
+const lgnEmail = document.getElementById("lgnEmail");
+const lgnPass = document.getElementById("lgnPass");
+
+const sgnName = document.getElementById("sgnName");
+const sgnEmail = document.getElementById("sgnEmail");
+const sgnNumber = document.getElementById("sgnNumber");
+const sgnGenre = document.getElementById("sgnGenre");
+const sgnPass = document.getElementById("sgnPass");
+
+
 
 loginBtn.addEventListener("click", login);
 signupSwapBtn.addEventListener("click", signupSwap);
@@ -17,7 +27,32 @@ loginSwapBtn.addEventListener("click", loginSwap);
 function login() {
     console.log("logging in...")
 
+    let curEmail = lgnEmail.value;
+    let curPass = lgnPass.value;
 
+    if (curEmail == "") {
+        console.log("Email missing!");
+    } else if (curPass == "") {
+        console.log("Password missing!");
+    } else {
+        //axios.get("http://localhost/cinema-server/controllers/getUsers.php").then(response => console.log(response.data["users"]));
+        //axios.get("http://localhost/cinema-server/controllers/getUsers.php").then(response => response.data["users"]).then(function (data) {console.log(data)});
+
+        axios({
+            method: "get",
+            url: "http://localhost/cinema-server/controllers/getUsers.php?",
+            params: {
+                email: curEmail
+            }
+        }).then(function (response) {
+            console.log(response.data);
+            if (response.data == "") {
+                console.log("No such email!");
+            }
+        });
+
+        lgnEmail.value = lgnPass.value = "";
+    }
 }
 
 function signupSwap() {
