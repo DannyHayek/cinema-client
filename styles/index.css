@@ -25,7 +25,7 @@ header {
 }
 
 main {
-    height: 70dvh;
+    height: 80dvh;
     min-height: 50dvh;
 }
 
@@ -71,6 +71,10 @@ main {
 
 .forms-div {
     gap: 1.3em;
+}
+
+.forms-div-signup {
+    gap: 1.1em;
 }
 
 .form-label {
