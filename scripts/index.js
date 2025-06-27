@@ -25,8 +25,6 @@ signupBtn.addEventListener("click", signup);
 loginSwapBtn.addEventListener("click", loginSwap);
 
 function login() {
-    console.log("logging in...")
-
     if (lgnEmail.value == "") {
         console.log("Email missing!");
     } else if (lgnPass.value == "") {
@@ -49,7 +47,7 @@ function login() {
                 console.log("No such email!");
             } else if (response.data[4] == curPass){
                 console.log(response.data[4]);
-                console.log("Password correct!");
+                console.log("Password correct! Logging in...");
             } else {
                 console.log("Password wrong!");
                 console.log(response.data[4]);
@@ -70,6 +68,26 @@ function signupSwap() {
 
 function signup () {
     console.log("signing up...")
+
+    let curName = sgnName.value;
+    let curEmail = sgnEmail.value;
+    let curNumber = sgnNumber.value;
+    let curPass = sgnPass.value;
+
+    //sgnName.value = sgnEmail.value = sgnNumber.value = sgnPass.value = "";
+
+    console.log(curName, curEmail, curNumber, curPass);
+    
+    let params = new FormData();
+
+    params.append("email", curEmail);
+    params.append("name", curName);
+    params.append("phone_number", curNumber);
+    params.append("password", curPass);
+
+    axios.post("http://localhost/cinema-server/controllers/insertUser.php", params).then(response => console.log(response)).then(error => console.log(error));
+
+    console.log("New user registered!");
 }
 
 function loginSwap () {
