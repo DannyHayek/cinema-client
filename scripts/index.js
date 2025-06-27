@@ -27,27 +27,33 @@ loginSwapBtn.addEventListener("click", loginSwap);
 function login() {
     console.log("logging in...")
 
-    let curEmail = lgnEmail.value;
-    let curPass = lgnPass.value;
-
-    if (curEmail == "") {
+    if (lgnEmail.value == "") {
         console.log("Email missing!");
-    } else if (curPass == "") {
+    } else if (lgnPass.value == "") {
         console.log("Password missing!");
     } else {
         //axios.get("http://localhost/cinema-server/controllers/getUsers.php").then(response => console.log(response.data["users"]));
         //axios.get("http://localhost/cinema-server/controllers/getUsers.php").then(response => response.data["users"]).then(function (data) {console.log(data)});
 
+        let curPass = lgnPass.value;
+
         axios({
             method: "get",
             url: "http://localhost/cinema-server/controllers/getUsers.php?",
             params: {
-                email: curEmail
+                email: lgnEmail.value
             }
         }).then(function (response) {
             console.log(response.data);
             if (response.data == "") {
                 console.log("No such email!");
+            } else if (response.data[4] == curPass){
+                console.log(response.data[4]);
+                console.log("Password correct!");
+            } else {
+                console.log("Password wrong!");
+                console.log(response.data[4]);
+                console.log(curPass);
             }
         });
 
