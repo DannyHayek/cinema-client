@@ -33,6 +33,7 @@ function login() {
         //axios.get("http://localhost/cinema-server/controllers/getUsers.php").then(response => console.log(response.data["users"]));
         //axios.get("http://localhost/cinema-server/controllers/getUsers.php").then(response => response.data["users"]).then(function (data) {console.log(data)});
 
+        let curEmail = lgnEmail.value;
         let curPass = lgnPass.value;
 
         axios({
@@ -43,17 +44,17 @@ function login() {
             }
         }).then(function (response) {
             console.log(response.data);
-            if (response.data == "") {
-                console.log("No such email!");
-            } else if (response.data[4] == curPass){
-                console.log(response.data[4]);
-                console.log("Password correct! Logging in...");
+            if (response.data[2] == curEmail) {
+                if (response.data[4] == curPass){
+                    console.log(response.data[4]);
+                    console.log("Password correct! Logging in...");
+                    setCurrentUser(response.data[1]);
+                } else if (response.data[4] != curPass){;
+                console.log("Incorrect password!");
             } else {
-                console.log("Password wrong!");
-                console.log(response.data[4]);
-                console.log(curPass);
+                console.log("No user with that email!");
             }
-        });
+        }});
 
         lgnEmail.value = lgnPass.value = "";
     }
@@ -88,6 +89,8 @@ function signup () {
     axios.post("http://localhost/cinema-server/controllers/insertUser.php", params).then(response => console.log(response)).then(error => console.log(error));
 
     console.log("New user registered!");
+
+    setCurrentUser(curName);
 }
 
 function loginSwap () {
@@ -95,4 +98,10 @@ function loginSwap () {
 
     loginDiv.style.display = "flex";
     signupDiv.style.display = "none";
+}
+
+function setCurrentUser (name) {
+    localStorage.setItem("currentUser", name);
+
+    window.location.href = "../pages/home.html";
 }
