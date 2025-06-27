@@ -83,7 +83,7 @@ main {
     max-width: 10rem;
     border-radius: 6%;
     background-color: rgba(39, 44, 55, 1);
-    height: 2em;
+    height: 1.6em;
     color: whitesmoke;
 }
 
@@ -93,7 +93,10 @@ main {
 }
 
 .signup-form {
-    display: none !important;
+    display: none;
+    border-bottom: 1px solid;
+    border-color: whitesmoke;
+
 }
 
 footer {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css"/>
     <link rel="stylesheet" href="./styles/global.css"/>
-    <script src="./scripts/index.js" defer></script>
+    <script type="module" src="./scripts/index.js" defer></script>
     <title>Panorama Cinemas - Home Page</title>
     <link rel="icon" type="image/x-icon" href="./assets/panorama_icon.png">
 </head>
@@ -19,7 +19,7 @@
     <main class="flex flex-center">
         <aside class="landing-image-aside-left"></aside>
 
-        <section class="flex column flex-space-evenly landing-buttons-section">
+        <section id="loginDiv" class="flex column flex-space-evenly landing-buttons-section">
 
             <div class="flex column flex-space-between login-form">
 
@@ -35,22 +35,30 @@
 
             <div class="buttons-div flex flex-center column">
                 <h4 class="landing-heading-4 light-font">Don't have an account?</h4>
-                <button class="light-button dark-font landing-button register-btn" id="signup-btn">SIGN UP</button>
+                <button class="light-button dark-font landing-button register-btn" id="signup-swap-btn">SIGN UP</button>
             </div>
 
         </section>
 
-        <section class="flex column flex-center signup-form">
+        <section id="signupDiv" class="signup-form flex-center column signup-form">
             <form class="flex flex-center column forms-div">
                 <label class = "light-font form-label">Email</label>
                 <input id = "username" class = "user-pass-input form-field" type="text">
-                <label class = "light-font form-label">Email</label>
+                <label class = "light-font form-label">Phone Number</label>
                 <input id = "username" class = "user-pass-input form-field" type="text">
-                <label class = "light-font form-label">Email</label>
+                <label class = "light-font form-label">Favorite Genre</label>
                 <input id = "username" class = "user-pass-input form-field" type="text">
                 <label class = "light-font form-label">Password</label>
                 <input id = "password" class = "user-pass-input form-field" type="password">
             </form>
+
+            <button class="light-button dark-font landing-button register-btn" id="signup-btn">SIGN UP</button>
+
+            <div class="buttons-div flex flex-center column">
+                <h4 class="landing-heading-4 light-font">Already have an account?</h4>
+                <button class="dark-button blue-font landing-button login-btn" id="login-swap-btn">LOG IN</button>
+            </div>
+
         </section>
 
         <aside class="landing-image-aside-right"></aside>
