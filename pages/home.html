@@ -11,16 +11,24 @@
 </head>
 <body>
     <header>
-        <h1 class="light-font">PANORAMA</h1>
-        <h3 class="light-font">The Home of Movies</h3>
-        <nav class="home-nav flex flex-center">
-            <h4 class="light-font">Profile</h4>
-            <h4 class="light-font">Movies</h4>
-            <h4 class="light-font">Showtimes</h4>
-            <h4 class="light-font">Snacks</h4>
-            <h4 class="light-font">Welcome, User</h4>
-            <h4 class="light-font">Logout</h4>
-        </nav>
+        <section class="flex flex-space-between title-header">
+            <img class="home-logo" src="../assets/panorama_logo_trans.png" alt="PANORAMA Logo">
+            <!-- <h1 class="light-font home-title">PANORAMA</h1> -->
+            <h3 class="light-font home-subtitle">The Home of Movies</h3>
+            <h4 class="light-font home-nav-user" id="welcomeMessage">Welcome, User</h4>
+        </section>
+        
+        <div class="home-nav flex flex-center" id="homeNav">
+            <a href="" class="active-nav">Movies</a>
+            <a href="">Showtimes</a>
+            <a href="">Profile</a>
+            <a href="../index.html">Logout</a>
+        </div>
     </header>
+    <main>
+        <section class="movie-tiles">
+
+        </section>
+    </main>
 </body>
 </html>
