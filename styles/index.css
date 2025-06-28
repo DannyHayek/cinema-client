@@ -69,6 +69,15 @@ main {
     background-image: -webkit-linear-gradient(left, rgba(39, 44, 55, 0.5) 20%, rgba(39, 44, 55, 0.6) 50%, rgba(39, 44, 55, 0.7) 80%, rgba(39, 44, 55, 0.9) 90%, rgba(39, 44, 55, 0.99) 100%), url(../assets/how_to_train_your_dragon.jpg);
 }
 
+.genre-select {
+    text-align: center;
+    min-width: 4rem;
+    max-width: 10rem;
+    border-radius: 6%;
+    background-color: rgba(39, 44, 55, 1);
+    height: 1.6em;
+}
+
 .forms-div {
     gap: 1.3em;
 }
