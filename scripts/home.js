@@ -30,8 +30,8 @@ axios({
         let tile = movieCards[i];
         tile.addEventListener("click", function () {
             console.log(tile.id);
-            localStorage.setItem("currentMovie", tile.id)
-            // window.location.href = "../pages/quiz.html";
+            localStorage.setItem("currentMovie", tile.id);
+            window.location.href = "../pages/movie.html";
         });
 
         // console.log(localStorage.setItem("curretMovieID", );
