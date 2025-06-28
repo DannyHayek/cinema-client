@@ -73,11 +73,12 @@ main {
 
 .tile-bottom-text {
     display: none;
-    padding-bottom: 30%;
+    padding-bottom: 25%;
+    overflow:scroll;
 }
 
 .movie-tile {
-    background-image:-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0) 50%, rgba(39, 44, 55, 0.99) 100%), URL("../assets/iron-man-3.webp");
+    background-image:-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0) 50%, rgba(39, 44, 55, 0.99) 100%), URL("../assets/iron_man_3.webp");
     color: white;
     border: 1px solid black;
     padding-top: 4%;
@@ -92,7 +93,7 @@ main {
 }
 
 .movie-tile:hover {
-    background-image:-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0.6) 50%, rgba(39, 44, 55, 0.99) 100%), URL("../assets/iron-man-3.webp");
+    background-image:-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0.6) 50%, rgba(39, 44, 55, 0.99) 100%), URL("../assets/iron_man_3.webp");
     font-size: 1.2em;
 }
 
@@ -114,6 +115,11 @@ main {
     .movie-tile {
         width: 156px;
         height: 250px;
+    }
+
+    .tile-bottom-text {
+        font-size: 0.6em;
+        padding-bottom: 15%;
     }
 }
 
