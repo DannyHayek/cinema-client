@@ -93,6 +93,10 @@ main {
 }
 
 .movie-tile:hover {
+    cursor: pointer;
+}
+
+.movie-tile:hover {
     background-image:-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0.6) 50%, rgba(39, 44, 55, 0.99) 100%), URL("../assets/iron_man_3.webp");
     font-size: 1.2em;
 }
