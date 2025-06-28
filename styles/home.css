@@ -56,6 +56,27 @@
     text-align: center;
 }
 
+main {
+    min-height: 38rem;
+    padding: 10%;
+}
+
+.movie-tiles-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 1px;
+    border: 1px solid black;
+    min-height: 32rem;
+}
+
+.movie-tile {
+    background-color: darkgreen;
+    color: white;
+    border: 1px solid black;
+    margin: 2%;
+    min-width: 2em;
+}
+
 @media (max-width: 900px) {
     .home-nav {
         gap: 7%;
