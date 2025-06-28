@@ -67,9 +67,13 @@ main {
     grid-template-columns: auto auto auto auto;
     /* grid-template-rows: repeat(auto-fill, minmax(150px, 1fr)); */
     grid-gap: 2px;
-    border: 1px solid black;
     height: fit-content;
     justify-items: center;
+}
+
+.tile-bottom-text {
+    display: none;
+    padding-bottom: 50%;
 }
 
 .movie-tile {
@@ -90,6 +94,10 @@ main {
 .movie-tile:hover {
     background-image:-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0.6) 50%, rgba(39, 44, 55, 0.99) 100%), URL("../assets/iron-man-3.webp");
     font-size: 1.2em;
+}
+
+.movie-tile:hover h5 {
+    display: block;
 }
 
 @media (max-width: 1200px) {
