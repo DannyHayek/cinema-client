@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* max-width: 100dvw;
+    min-width: 50dvw;
+    min-height: 100dvh; */
+    background-color: #272C37;
+}
+
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+    
+.column {
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-space-evenly {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-space-between {
+    justify-content:space-between;
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.light-font {
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.blue-font {
+    color: #5D83BD;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dark-font {
+    color: rgb(39, 44, 55);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.light-button {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.light-button:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+.blue-button {
+    background-color: #5D83BD;
+    cursor: pointer;
+}
+
+.blue-button:hover {
+    background-color: #94b9f1;
+}
+
+.dark-button {
+    background-color: #272C37;
+    cursor: pointer;
+}
+
+.dark-button:hover {
+    background-color: #1e2025;
+}

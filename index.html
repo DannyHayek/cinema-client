@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css"/>
+    <link rel="stylesheet" href="./styles/global.css"/>
+    <script type="module" src="./scripts/index.js" defer></script>
+    <title>Panorama Cinemas - Landing Page</title>
+    <link rel="icon" type="image/x-icon" href="./assets/panorama_icon.png">
+</head>
+<body>
+    <header class="light-font">
+        <!-- <h1 class="landing-heading-1">PANORAMA</h1> -->
+        <img class="landing-logo" src="./assets/panorama_logo_trans.png" alt="PANORAMA Logo">
+        <h3 class="landing-heading-2">Your View Into Other Worlds</h3>
+    </header>
+
+    <main class="flex flex-center">
+        <aside class="landing-image-aside-left"></aside>
+
+        <section id="loginDiv" class="flex column flex-space-evenly landing-buttons-section">
+
+            <div class="flex column flex-space-between login-form">
+
+                <form class="flex flex-center column forms-div">
+                    <label class = "light-font form-label">Email/Phone Number</label>
+                    <input id = "lgnEmail" class = "user-pass-input form-field" type="text">
+                    <label class = "light-font form-label">Password</label>
+                    <input id = "lgnPass" class = "user-pass-input form-field" type="password">
+                </form>
+
+                <button class="dark-button blue-font landing-button login-btn" id="login-btn">LOG IN</button>
+            </div>
+
+            <div class="buttons-div flex flex-center column">
+                <h4 class="landing-heading-4 light-font">Don't have an account?</h4>
+                <button class="light-button dark-font landing-button register-btn" id="signup-swap-btn">SIGN UP</button>
+            </div>
+
+        </section>
+
+        <section id="signupDiv" class="signup-form flex-center column signup-form">
+            <form class="flex flex-center column forms-div-signup">
+                <label class = "light-font form-label">Name</label>
+                <input id = "sgnName" class = "user-pass-input form-field" type="text">
+                <label class = "light-font form-label">Email</label>
+                <input id = "sgnEmail" class = "user-pass-input form-field" type="text">
+                <label class = "light-font form-label">Phone Number</label>
+                <input id = "sgnNumber" class = "user-pass-input form-field" type="text">
+                <label class = "light-font form-label">Favorite Genre</label>
+                <input id = "sgnGenre" class = "user-pass-input form-field" type="text">
+                <label class = "light-font form-label">Password</label>
+                <input id = "sgnPass" class = "user-pass-input form-field" type="password">
+            </form>
+
+            <button class="light-button dark-font landing-button register-btn" id="signup-btn">SIGN UP</button>
+
+            <div class="buttons-div flex flex-center column">
+                <h4 class="landing-heading-4 light-font">Already have an account?</h4>
+                <button class="dark-button blue-font landing-button login-btn" id="login-swap-btn">LOG IN</button>
+            </div>
+
+        </section>
+
+        <aside class="landing-image-aside-right"></aside>
+
+    </main>
+    <footer class="flex flex-center footer-background">
+        <div class="footer-text footer-transbox">
+            <p>Your pathway into another universe. Immerse yourself in movies, with customized menus, recommendations and bookings.</p>
+        </div>
+    </footer>
+</body>
+</html>

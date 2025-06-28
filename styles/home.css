@@ -1,0 +1,138 @@
+.title-header {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.home-logo {
+    height: auto;
+    max-width: 10rem;
+    margin-right: -8%;
+}
+
+.home-nav {
+    border-bottom: 1px solid;
+    border-color: whitesmoke;
+    padding: 1.4rem 1.1rem;
+    gap: 20dvw;
+    background-color: #5D83BD;
+    overflow: hidden;
+}
+
+.home-nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.home-nav a:hover {
+    background-color: whitesmoke;
+    color: #5D83BD;
+}
+
+.active-nav {
+    background-color: rgb(39, 44, 55);
+    color: white;
+}
+
+.home-nav-user {
+
+}
+
+.nav-elem {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.home-title {
+    text-align: center;
+    padding: 1.2rem 0px;
+}
+
+.home-subtitle {
+    text-align: center;
+}
+
+main {
+    min-height: fit-content;
+    padding: 10%;
+}
+
+.movie-tiles-section {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+    grid-template-columns: auto auto auto auto;
+    /* grid-template-rows: repeat(auto-fill, minmax(150px, 1fr)); */
+    grid-gap: 2px;
+    height: fit-content;
+    justify-items: center;
+}
+
+.tile-bottom-text {
+    display: none;
+    padding-bottom: 50%;
+}
+
+.movie-tile {
+    background-image:-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0) 50%, rgba(39, 44, 55, 0.99) 100%), URL("../assets/iron-man-3.webp");
+    color: white;
+    border: 1px solid black;
+    padding-top: 4%;
+    margin: 3%;
+    min-width: 2em;
+    text-align: center;
+    background-position: 50%;
+    background-size: contain;
+    /* max-width: 12dvw; */
+    width: 234px;
+    height: 375px;
+}
+
+.movie-tile:hover {
+    background-image:-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0.6) 50%, rgba(39, 44, 55, 0.99) 100%), URL("../assets/iron-man-3.webp");
+    font-size: 1.2em;
+}
+
+.movie-tile:hover h5 {
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .movie-tiles-section {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .home-nav {
+        gap: 7%;
+    }
+
+    .movie-tile {
+        width: 156px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-nav {
+        gap: 6%;
+    }
+
+    .nav-elem {
+        font-size: 1rem;
+    }
+
+    .movie-tiles-section {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .movie-tiles-section {
+        grid-template-columns: auto;
+    }
+}

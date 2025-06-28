@@ -1,0 +1,144 @@
+header {
+    max-width: 100dvw;
+    text-align: center;
+    padding: min(8%, 4em);
+    max-height: 150px;
+}
+
+.landing-heading-1 {
+    font-size: clamp(3em, 10vw, 5em);
+}
+
+.landing-logo {
+    height: auto;
+    max-width: 100%;
+}
+
+.landing-heading-2 {
+    font-size: clamp(1.4em, 5.5vw, 2.5em);
+}
+
+.landing-heading-4 {
+    font-size: clamp(1.1em, 4.5vw, 2em);
+    padding-top: 1em;
+    text-align: center;
+}
+
+main {
+    height: 80dvh;
+    min-height: 50dvh;
+}
+
+.landing-buttons-section {
+    max-width: 40dvw;
+    min-width: 30dvw;
+    height: 50dvh;
+    margin-left: -8%;
+    margin-right: -8%;
+}
+
+.landing-button {
+    max-width: 20em;
+    width: 70%;
+    min-width: 8em;
+    max-height: 20rem;
+    min-height: 3rem;
+    border: 3px;
+    border-style: groove;
+    border-radius: 8%;
+}
+
+.login-btn {
+    margin: 2em 0em 2em 0em;
+}
+
+.register-btn {
+    margin: 2em 0em 2em 0em;
+}
+
+.landing-image-aside-right {
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background-image: -webkit-linear-gradient(right, rgba(39, 44, 55, 0.5) 20%, rgba(39, 44, 55, 0.6) 50%, rgba(39, 44, 55, 0.7) 80%, rgba(39, 44, 55, 0.9) 90%, rgba(39, 44, 55, 0.99) 100%), url(../assets/how_to_train_your_dragon.jpg);
+}
+
+.landing-image-aside-left {
+    width: 50%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(left, rgba(39, 44, 55, 0.5) 20%, rgba(39, 44, 55, 0.6) 50%, rgba(39, 44, 55, 0.7) 80%, rgba(39, 44, 55, 0.9) 90%, rgba(39, 44, 55, 0.99) 100%), url(../assets/how_to_train_your_dragon.jpg);
+}
+
+.forms-div {
+    gap: 1.3em;
+}
+
+.forms-div-signup {
+    gap: 1.1em;
+}
+
+.form-label {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.form-field {
+    min-width: 4rem;
+    max-width: 10rem;
+    border-radius: 6%;
+    background-color: rgba(39, 44, 55, 1);
+    height: 1.6em;
+    color: whitesmoke;
+}
+
+.login-form {
+    border-bottom: 1px solid;
+    border-color: whitesmoke;
+}
+
+.signup-form {
+    display: none;
+    border-bottom: 1px solid;
+    border-color: whitesmoke;
+
+}
+
+footer {
+    font-size: 1.5rem;
+    max-width: 100dvw;
+    min-height: 8em;
+    text-align: center;
+    padding: 10% min(8%, 4em);
+    border: 1px 0px 0px 0px;
+    border-style: dotted;
+    border-color: whitesmoke;
+}
+
+/* .footer-image {
+    src: url(../assets/movie_grid.jpg);
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+} */
+
+
+.footer-background {
+  background: url(../assets/movie_grid.jpg) repeat;
+  border: 2px solid black;
+  opacity: 0.5;
+}
+
+.footer-transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+.footer-transbox p {
+  margin: 5%;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  opacity: 1;
+}
