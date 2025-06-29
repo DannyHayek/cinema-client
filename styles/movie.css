@@ -63,16 +63,16 @@ main {
 }
 
 .image-poster {
-    width: 20rem;
+    width: 19rem;
     height: auto;
 }
 
 .movie-info {
-    margin-right: 20%;
+    margin-right: 1%;
 }
 
 .movie-info h2 {
-    font-size: 6em;
+    font-size: 5em;
     text-align: center;
 }
 
@@ -93,7 +93,7 @@ main {
     }
 
     .movie-info {
-        margin-right: 5%;
+        margin-right: 1%;
     }
 
     .movie-info h2 {
