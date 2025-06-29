@@ -57,6 +57,24 @@
     text-align: center;
 }
 
+.prof-details {
+    width: 100%;
+    height: fit-content;
+    gap: 4rem
+}
+
+.prof-details section {
+    width: 80%;
+    gap: 1.1rem;
+}
+
+.change-btn {
+    width: 4em;
+    height: 2em;
+    border: #5D83BD;
+    border-radius: 20px;
+}
+
 @media (max-width: 1200px) {
 }
 
