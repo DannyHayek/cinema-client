@@ -95,12 +95,9 @@ function signup () {
     params.append("age", 0)
     params.append("favGenre", curGenre);
 
-
-    axios.post("http://localhost/cinema-server/controllers/getUsers.php", params)
+    axios.post("http://localhost/cinema-server/controllers/insertUser.php", params)
     .then(response => console.log(response)).then(error => console.log(error))
-    .then(console.log("New user registered!"));        
-
-    setCurrentUser(curName, curEmail);
+    .then(console.log("New user registered!")).then(function (e) {setCurrentUser(curName, curEmail)});
 }
 
 function loginSwap () {

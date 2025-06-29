@@ -30,6 +30,8 @@ const newAge = document.getElementById("newAge");
 const newPass = document.getElementById("newPass");
 // const newGenre = document.getElementById("newName");
 
+chngName.addEventListener("click", updateUser);
+
 
 fetchInfo();
 
@@ -54,9 +56,21 @@ function fetchInfo () {
             }
 
             userGenre.textContent = response.data[6];
-        }).then(function (userID) {
-
-        });
+        })
 }
 
+async function updateUser () {
+    let params = new FormData();
+    
+    params.append("email", curEmail);
+    params.append("name", curName);
+    params.append("phone_number", curNumber);
+    params.append("password", curPass);
+    params.append("age", 0)
+    params.append("favGenre", curGenre);
 
+
+    await axios.post("http://localhost/cinema-server/controllers/getUsers.php", params)
+    .then(response => console.log(response)).then(error => console.log(error))
+    .then(console.log("New user registered!"));
+}
