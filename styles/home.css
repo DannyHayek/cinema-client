@@ -90,6 +90,7 @@ main {
     /* max-width: 12dvw; */
     width: 234px;
     height: 375px;
+    border-radius: 30px;
 }
 
 .movie-tile:hover {
