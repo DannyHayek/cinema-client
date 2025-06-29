@@ -69,6 +69,7 @@ main {
 
 .movie-info {
     margin-right: 1%;
+    gap: 10px;
 }
 
 .movie-info h2 {

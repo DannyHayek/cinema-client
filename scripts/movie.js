@@ -34,10 +34,10 @@ axios({
             console.log(genreData);
 
 
-            movieName.textContent = movie[1];
-            synopsis.textContent = movie[2];
-            runtime.textContent = movie[3] + " minutes";
-            ageRating.textContent = movie[4];
+            movieName.textContent += movie[1];
+            synopsis.textContent += movie[2];
+            runtime.textContent += movie[3] + " minutes";
+            ageRating.textContent += movie[4];
             trailerLink.textContent = movie[5];
 
             for (let i = 0; i < genreData.length; i++) {
