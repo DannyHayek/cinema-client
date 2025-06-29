@@ -61,6 +61,16 @@ main {
     margin: 2em 0em;
 }
 
+.form-field {
+    min-width: 4rem;
+    max-width: 10rem;
+    border-radius: 6%;
+    background-color: rgba(39, 44, 55, 1);
+    height: 1.6em;
+    color: whitesmoke;
+    text-align: center;
+}
+
 .prof-details {
     width: 100%;
     height: fit-content;

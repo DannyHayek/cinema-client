@@ -98,6 +98,7 @@ main {
     background-color: rgba(39, 44, 55, 1);
     height: 1.6em;
     color: whitesmoke;
+    text-align: center;
 }
 
 .login-form {
