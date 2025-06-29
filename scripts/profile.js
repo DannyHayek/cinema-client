@@ -24,7 +24,7 @@ axios({
                 email: currentEmail
             }
         }).then(function (response) {
-            console.log(response.data[1]);
+            console.log(response.data);
             userName.textContent = response.data[1];
             userEmail.textContent = response.data[2];
             userNumber.textContent = response.data[3];

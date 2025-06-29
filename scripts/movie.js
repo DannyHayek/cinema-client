@@ -7,7 +7,7 @@ const welcomeMessage = document.getElementById("welcomeMessage");
 
 welcomeMessage.textContent = "Welcome, " + currentUser;
 
-const curMovieID = localStorage.getItem("currentMovie").at(5);
+const curMovieID = localStorage.getItem("currentMovie");
 
 console.log(curMovieID);
 
