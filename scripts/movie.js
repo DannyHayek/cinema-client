@@ -30,12 +30,14 @@ axios({
         }).then(function (response) {
             const movie = response.data["movie"];
             const genreData = response.data["genre"];
+            const actorsData = response.data["actor"];
+
             console.log(movie);
             console.log(genreData);
-
-
-            movieName.textContent += movie[1];
-            synopsis.textContent += movie[2];
+            console.log(actorsData);
+            
+            movieName.textContent = movie[1];
+            synopsis.textContent = movie[2];
             runtime.textContent += movie[3] + " minutes";
             ageRating.textContent += movie[4];
             trailerLink.textContent = movie[5];
@@ -47,5 +49,14 @@ axios({
                     genre.textContent += ", ";
                 }
             }
+
+            for (let i = 0; i < actorsData.length; i++) {
+                console.log(actorsData[i][1]);
+                cast.textContent += actorsData[i][1];
+                if (i + 1 != actorsData.length) {
+                    cast.textContent += ", ";
+                }
+            }
+
         }
 );
