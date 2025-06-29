@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/movie.css"/>
+    <link rel="stylesheet" href="../styles/global.css"/>
+    <script type="module" src="../scripts/movie.js" defer></script>
+    <title>Panorama Cinemas - Movie</title>
+    <link rel="icon" type="image/x-icon" href="../assets/panorama_icon.png">
+</head>
+<body>
+    <header>
+        <section class="flex flex-space-between title-header">
+            <img class="home-logo" src="../assets/panorama_logo_trans.png" alt="PANORAMA Logo">
+            <h3 class="light-font home-subtitle">The Home of Movies</h3>
+            <h4 class="light-font home-nav-user" id="welcomeMessage">Welcome, User</h4>
+        </section>
+        
+        <div class="home-nav flex flex-center" id="homeNav">
+            <a href="./home.html">Movies</a>
+            <a href=""  class="active-nav">Showtimes</a>
+            <a href="">Profile</a>
+            <a href="../index.html">Logout</a>
+        </div>
+    </header>
+
+    <main class="flex flex-space-between">
+
+        <img id="moviePoster" class="image-poster" src="../assets/iron_man_3.webp" alt="Iron Man 3">
+
+        <section class="flex column flex-space-between movie-info">
+            <h2 id="movieName" class="light-font">Movie Name</h2>
+            <p id="synopsis" class="light-font">Synopsis: </p>
+            <p id="cast" class="light-font">Cast: </h4>
+            <p id="runtime" class="light-font">Runtime: </h4>
+            <p id="ageRating" class="light-font">Age Rating: </h4>
+            <p id="genre" class="light-font">Genre: </h4>
+            <p id="trailerLink" class="light-font">Link to Trailer</h4>
+        </section>
+    </main>
+</body>
+</html>

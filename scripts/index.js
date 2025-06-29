@@ -17,7 +17,7 @@ const sgnNumber = document.getElementById("sgnNumber");
 const sgnGenre = document.getElementById("sgnGenre");
 const sgnPass = document.getElementById("sgnPass");
 
-
+const favGenre = document.getElementById("favGenre");
 
 loginBtn.addEventListener("click", login);
 signupSwapBtn.addEventListener("click", signupSwap);
@@ -75,9 +75,16 @@ function signup () {
     let curNumber = sgnNumber.value;
     let curPass = sgnPass.value;
 
-    //sgnName.value = sgnEmail.value = sgnNumber.value = sgnPass.value = "";
+    let curGenre = favGenre.value;
 
-    console.log(curName, curEmail, curNumber, curPass);
+    if (curGenre == 0) {
+        curGenre = null;
+    }
+
+    sgnName.value = sgnEmail.value = sgnNumber.value = sgnPass.value = "";
+    favGenre.value = 0;
+
+    console.log(curName, curEmail, curNumber, curPass, curGenre);
     
     let params = new FormData();
 
@@ -85,8 +92,11 @@ function signup () {
     params.append("name", curName);
     params.append("phone_number", curNumber);
     params.append("password", curPass);
+    params.append("age", 0)
+    params.append("favGenre", curGenre);
 
-    axios.post("http://localhost/cinema-server/controllers/insertUser.php", params).then(response => console.log(response)).then(error => console.log(error));
+
+    axios.post("http://localhost/cinema-server/controllers/getUsers.php", params).then(response => console.log(response)).then(error => console.log(error));
 
     console.log("New user registered!");
 
