@@ -2,7 +2,8 @@ header {
     max-width: 100dvw;
     text-align: center;
     padding: min(8%, 4em);
-    max-height: 150px;
+    max-height: 30rem;
+    margin-bottom: 2em;
 }
 
 .landing-heading-1 {
@@ -12,6 +13,7 @@ header {
 .landing-logo {
     height: auto;
     max-width: 50dvw;
+    min-width: 280px;
 }
 
 .landing-heading-2 {
