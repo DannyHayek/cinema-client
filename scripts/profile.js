@@ -1,7 +1,7 @@
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.10.0/+esm';
 
-const currentUser = localStorage.getItem("currentUser");
-const currentEmail = localStorage.getItem("currentEmail");
+let currentUser = localStorage.getItem("currentUser");
+let currentEmail = localStorage.getItem("currentEmail");
 console.log(currentUser);
 console.log(currentEmail);
 
@@ -52,6 +52,7 @@ function fetchInfo () {
             userAge.textContent = response.data[5];
 
             userGenreID = response.data[7];
+            console.log(response.data[4]);
             currentPass = response.data[4];
 
             for (let i = 0; i < response.data[4].length; i++) {
@@ -73,12 +74,17 @@ async function updateUser (newAttr) {
         params.append("name", userName.textContent);
     } else {
         params.append("name", newName.value);
+        currentUser = newName.value;
+        localStorage.setItem("currentUser", newName.value);
+        welcomeMessage.textContent = "Welcome, " + currentUser;
     }
 
     if (newEmail.value == "") {
         params.append("email", userEmail.textContent);
     } else {
         params.append("email", newEmail.value);
+        currentEmail = newEmail.value;
+        localStorage.setItem("currentEmail", newEmail.value);
     }
 
     if (newNumber.value == "") {
@@ -111,6 +117,9 @@ async function updateUser (newAttr) {
     axios.post("http://localhost/cinema-server/controllers/updateUser.php", params)
     .then(response => console.log(response)).then(error => console.log(error))
     .then(console.log("User successfully updated!"));
+
+    fetchInfo();
+    
 }
 
 
