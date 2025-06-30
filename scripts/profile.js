@@ -10,6 +10,9 @@ const welcomeMessage = document.getElementById("welcomeMessage");
 welcomeMessage.textContent = "Welcome, " + currentUser;
 
 let userID = 0;
+let userGenreID = 0;
+let currentPass = "";
+
 const userName = document.getElementById("userName");
 const userEmail = document.getElementById("userEmail");
 const userNumber = document.getElementById("userNumber");
@@ -48,6 +51,9 @@ function fetchInfo () {
             userNumber.textContent = response.data[3];
             userAge.textContent = response.data[5];
 
+            userGenreID = response.data[7];
+            currentPass = response.data[4];
+
             for (let i = 0; i < response.data[4].length; i++) {
                 userPassword.textContent += "*";
             }
@@ -82,7 +88,7 @@ async function updateUser (newAttr) {
     }
 
     if (newPass.value == "") {
-        params.append("password", userPassword.textContent);
+        params.append("password", currentPass);
     } else {
         params.append("password", newPass.value);
     }
@@ -94,16 +100,17 @@ async function updateUser (newAttr) {
     }
 
     if (newGenre.value == 0) {
-        params.append("favorite_genre_id", userPassword.textContent);
+        params.append("favorite_genre_id", userGenreID);
     } else {
-        params.append("favorite_genre_id", newPass.value);
+        params.append("favorite_genre_id", newGenre.value);
     }
 
     console.log(params);
     resetField();
-    // axios.post("http://localhost/cinema-server/controllers/insertUser.php", params)
-    // .then(response => console.log(response)).then(error => console.log(error))
-    // .then(console.log("New user registered!")).then(function (e) {setCurrentUser(curName, curEmail)});
+
+    axios.post("http://localhost/cinema-server/controllers/updateUser.php", params)
+    .then(response => console.log(response)).then(error => console.log(error))
+    .then(console.log("User successfully updated!"));
 }
 
 
