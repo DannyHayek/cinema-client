@@ -16,21 +16,21 @@ const userAge = document.getElementById("userAge");
 const userPassword = document.getElementById("userPassword");
 const userGenre = document.getElementById("userGenre");
 
-const chngName = document.getElementById("changeName");
-const chngEmail = document.getElementById("changeEmail");
-const chngNumber = document.getElementById("changeNumber");
-const chngAge = document.getElementById("changeAge");
-const chngPass = document.getElementById("changePass");
-const chngGenre = document.getElementById("changeGenre");
+// const chngName = document.getElementById("changeName");
+// const chngEmail = document.getElementById("changeEmail");
+// const chngNumber = document.getElementById("changeNumber");
+// const chngAge = document.getElementById("changeAge");
+// const chngPass = document.getElementById("changePass");
+// const chngGenre = document.getElementById("changeGenre");
 
-const newName = document.getElementById("newName");
-const newEmail = document.getElementById("newEmail");
-const newNumber = document.getElementById("newNumber");
-const newAge = document.getElementById("newAge");
-const newPass = document.getElementById("newPass");
-// const newGenre = document.getElementById("newName");
+const newName = document.getElementById("newName").value;
+const newEmail = document.getElementById("newEmail").value;
+const newNumber = document.getElementById("newNumber").value;
+const newAge = document.getElementById("newAge").value;
+const newPass = document.getElementById("newPass").value;
+// const newGenre = document.getElementById("newGenre");
 
-chngName.addEventListener("click", updateUser);
+//chngName.addEventListener("click", updateUser)
 
 
 fetchInfo();
@@ -59,18 +59,20 @@ function fetchInfo () {
         })
 }
 
-async function updateUser () {
-    let params = new FormData();
+async function updateUser (newAttr) {
+    console.log(newName.value);
+
+    // let params = new FormData();
     
-    params.append("email", curEmail);
-    params.append("name", curName);
-    params.append("phone_number", curNumber);
-    params.append("password", curPass);
-    params.append("age", 0)
-    params.append("favGenre", curGenre);
+    // params.append("email", curEmail);
+    // params.append("name", curName);
+    // params.append("phone_number", curNumber);
+    // params.append("password", curPass);
+    // params.append("age", 0)
+    // params.append("favGenre", curGenre);
 
 
-    await axios.post("http://localhost/cinema-server/controllers/getUsers.php", params)
-    .then(response => console.log(response)).then(error => console.log(error))
-    .then(console.log("New user registered!"));
+    // await axios.post("http://localhost/cinema-server/controllers/getUsers.php", params)
+    // .then(response => console.log(response)).then(error => console.log(error))
+    // .then(console.log("New user registered!"));
 }

@@ -59,6 +59,7 @@
 
 main {
     margin: 2em 0em;
+    max-height: 70dvh;
 }
 
 .form-field {
@@ -74,11 +75,18 @@ main {
 .prof-details {
     width: 100%;
     height: fit-content;
-    gap: 4rem
+    gap: 4rem;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+    grid-template-columns: auto auto auto;
+    /* grid-template-rows: repeat(auto-fill, minmax(150px, 1fr)); */
+    grid-gap: 2px;
+    height: fit-content;
+    justify-items: center;
 }
 
 .prof-details section {
-    width: 80%;
+    width: 20%;
     gap: 1.1rem;
 }
 
@@ -87,6 +95,10 @@ main {
     height: 2em;
     border: #5D83BD;
     border-radius: 20px;
+}
+
+footer {
+    width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -103,10 +115,18 @@ main {
         gap: 6%;
     }
 
+    .prof-details {
+        grid-template-columns: auto auto;
+    }
+
     .nav-elem {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 400px) {
+    
+    .prof-details {
+        grid-template-columns: auto;
+    }
 }
