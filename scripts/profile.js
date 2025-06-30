@@ -9,6 +9,7 @@ const welcomeMessage = document.getElementById("welcomeMessage");
 
 welcomeMessage.textContent = "Welcome, " + currentUser;
 
+let userID = 0;
 const userName = document.getElementById("userName");
 const userEmail = document.getElementById("userEmail");
 const userNumber = document.getElementById("userNumber");
@@ -29,6 +30,7 @@ submitChanges.addEventListener("click", updateUser)
 
 
 fetchInfo();
+resetField();
 
 
 function fetchInfo () {
@@ -40,7 +42,7 @@ function fetchInfo () {
             }
         }).then(function (response) {
             console.log(response.data);
-            let userID =  response.data[0];
+            userID =  response.data[0];
             userName.textContent = response.data[1];
             userEmail.textContent = response.data[2];
             userNumber.textContent = response.data[3];
@@ -55,19 +57,57 @@ function fetchInfo () {
 }
 
 async function updateUser (newAttr) {
-    console.log(newName.value, newEmail.value, newNumber.value, newPass.value, newAge.value, newGenre.value);
+    console.log(userID, newName.value, newEmail.value, newNumber.value, newPass.value, newAge.value, newGenre.value);
 
-    // let params = new FormData();
+    let params = new FormData();
     
-    // params.append("email", curEmail);
-    // params.append("name", curName);
-    // params.append("phone_number", curNumber);
-    // params.append("password", curPass);
-    // params.append("age", 0)
-    // params.append("favGenre", curGenre);
+    params.append("id", userID);
 
+    if (newName.value == "") {
+        params.append("name", userName.textContent);
+    } else {
+        params.append("name", newName.value);
+    }
 
-    // await axios.post("http://localhost/cinema-server/controllers/getUsers.php", params)
+    if (newEmail.value == "") {
+        params.append("email", userEmail.textContent);
+    } else {
+        params.append("email", newEmail.value);
+    }
+
+    if (newNumber.value == "") {
+        params.append("phone_number", userNumber.textContent);
+    } else {
+        params.append("phone_number", newNumber.value);
+    }
+
+    if (newPass.value == "") {
+        params.append("password", userPassword.textContent);
+    } else {
+        params.append("password", newPass.value);
+    }
+
+    if (newAge.value == "") {
+        params.append("age", userAge.textContent);
+    } else {
+        params.append("age", newAge.value);
+    }
+
+    if (newGenre.value == 0) {
+        params.append("favorite_genre_id", userPassword.textContent);
+    } else {
+        params.append("favorite_genre_id", newPass.value);
+    }
+
+    console.log(params);
+    resetField();
+    // axios.post("http://localhost/cinema-server/controllers/insertUser.php", params)
     // .then(response => console.log(response)).then(error => console.log(error))
-    // .then(console.log("New user registered!"));
+    // .then(console.log("New user registered!")).then(function (e) {setCurrentUser(curName, curEmail)});
+}
+
+
+function resetField () {
+    newName.value = newPass.value = newAge.value = newNumber.value = newEmail.value = "";
+    newGenre.value = 0;
 }
