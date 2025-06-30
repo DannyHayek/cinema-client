@@ -23,7 +23,7 @@ const newEmail = document.getElementById("newEmail");
 const newNumber = document.getElementById("newNumber");
 const newAge = document.getElementById("newAge");
 const newPass = document.getElementById("newPass");
-// const newGenre = document.getElementById("newGenre");
+const newGenre = document.getElementById("newGenre");
 
 submitChanges.addEventListener("click", updateUser)
 
@@ -55,7 +55,7 @@ function fetchInfo () {
 }
 
 async function updateUser (newAttr) {
-    console.log(newName.value, newEmail.value, newNumber.value, newPass.value, newAge.value);
+    console.log(newName.value, newEmail.value, newNumber.value, newPass.value, newAge.value, newGenre.value);
 
     // let params = new FormData();
     
