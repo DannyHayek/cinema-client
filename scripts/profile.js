@@ -16,21 +16,16 @@ const userAge = document.getElementById("userAge");
 const userPassword = document.getElementById("userPassword");
 const userGenre = document.getElementById("userGenre");
 
-// const chngName = document.getElementById("changeName");
-// const chngEmail = document.getElementById("changeEmail");
-// const chngNumber = document.getElementById("changeNumber");
-// const chngAge = document.getElementById("changeAge");
-// const chngPass = document.getElementById("changePass");
-// const chngGenre = document.getElementById("changeGenre");
+const submitChanges = document.getElementById("submitChanges");
 
-const newName = document.getElementById("newName").value;
-const newEmail = document.getElementById("newEmail").value;
-const newNumber = document.getElementById("newNumber").value;
-const newAge = document.getElementById("newAge").value;
-const newPass = document.getElementById("newPass").value;
+const newName = document.getElementById("newName");
+const newEmail = document.getElementById("newEmail");
+const newNumber = document.getElementById("newNumber");
+const newAge = document.getElementById("newAge");
+const newPass = document.getElementById("newPass");
 // const newGenre = document.getElementById("newGenre");
 
-//chngName.addEventListener("click", updateUser)
+submitChanges.addEventListener("click", updateUser)
 
 
 fetchInfo();
@@ -60,7 +55,7 @@ function fetchInfo () {
 }
 
 async function updateUser (newAttr) {
-    console.log(newName.value);
+    console.log(newName.value, newEmail.value, newNumber.value, newPass.value, newAge.value);
 
     // let params = new FormData();
     

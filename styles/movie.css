@@ -146,11 +146,12 @@ main {
 
 @media (max-width: 600px) {
     .home-nav {
-        gap: 6%;
+        gap: 4%;
     }
 
-    .nav-elem {
-        font-size: 1rem;
+    .home-nav a {
+        padding: 10px 14px;
+        font-size: 14px;
     }
 
     .image-poster {
@@ -179,6 +180,15 @@ main {
 }
 
 @media (max-width: 400px) {
+    .home-nav {
+        gap: 3%;
+    }
+
+    .home-nav a {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
     .image-poster {
         width: 10rem;
         height: auto;
