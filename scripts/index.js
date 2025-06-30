@@ -48,7 +48,7 @@ function login() {
                 if (response.data[4] == curPass){
                     console.log(response.data[4]);
                     console.log("Password correct! Logging in...");
-                    setCurrentUser(response.data[1]);
+                    setCurrentUser(response.data[1], response.data[2]);
                 } else if (response.data[4] != curPass){;
                 console.log("Incorrect password!");
             } else {
@@ -95,12 +95,9 @@ function signup () {
     params.append("age", 0)
     params.append("favGenre", curGenre);
 
-
-    axios.post("http://localhost/cinema-server/controllers/getUsers.php", params).then(response => console.log(response)).then(error => console.log(error));
-
-    console.log("New user registered!");
-
-    setCurrentUser(curName);
+    axios.post("http://localhost/cinema-server/controllers/insertUser.php", params)
+    .then(response => console.log(response)).then(error => console.log(error))
+    .then(console.log("New user registered!")).then(function (e) {setCurrentUser(curName, curEmail)});
 }
 
 function loginSwap () {
@@ -110,8 +107,9 @@ function loginSwap () {
     signupDiv.style.display = "none";
 }
 
-function setCurrentUser (name) {
+function setCurrentUser (name, email) {
     localStorage.setItem("currentUser", name);
+    localStorage.setItem("currentEmail", email);
 
     window.location.href = "../pages/home.html";
 }

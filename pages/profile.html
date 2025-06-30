@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/profile.css"/>
+    <link rel="stylesheet" href="../styles/global.css"/>
+    <script type="module" src="../scripts/profile.js" defer></script>
+    <title>Panorama Cinemas - Profile</title>
+    <link rel="icon" type="image/x-icon" href="../assets/panorama_icon.png">
+</head>
+<body>
+    <header>
+        <section class="flex flex-space-between title-header">
+            <img class="home-logo" src="../assets/panorama_logo_trans.png" alt="PANORAMA Logo">
+            <h3 class="light-font home-subtitle">The Home of Movies</h3>
+            <h4 class="light-font home-nav-user" id="welcomeMessage">Welcome, User</h4>
+        </section>
+        
+        <div class="home-nav flex flex-center" id="homeNav">
+            <a class="light-font" href="home.html">Movies</a>
+            <a class="light-font" href="">Showtimes</a>
+            <a class="light-font active-nav" href="profile.html">Profile</a>
+            <a class="light-font" href="../index.html">Logout</a>
+        </div>
+    </header>
+
+    <main class="prof-details light-font">
+
+        <section class="flex flex-center column prof-name">
+            <h2>Name</h2>
+            <h3 id="userName">Your Name</h3>
+            <input id = "newName" class = "form-field" type="text">
+        </section>
+
+        <section class="flex flex-center column prof-email">
+            <h2>Email</h2>
+            <h3 id="userEmail">Your Email</h3>
+            <input id = "newEmail" class = "form-field" type="text">
+        </section>
+
+        <section class="flex flex-center column prof-number">
+            <h2>Phone Number</h2>
+            <h3 id="userNumber">Your Number</h3>
+            <input id = "newNumber" class = "form-field" type="text">
+        </section>
+
+        <section class="flex flex-center column prof-age">
+            <h2>Age</h2>
+            <h3 id="userAge">Your Age</h3>
+            <input id = "newAge" class = "form-field" type="text">
+        </section>
+
+        <section class="flex flex-center column prof-password">
+            <h2>Password</h2>
+            <h3 id="userPassword"></h3>
+            <input id = "newPass" class = "form-field" type="password">
+        </section>
+
+        <section class="flex flex-center column prof-genre">
+            <h2>Favorite Genre</h2>
+            <h3 id="userGenre">Your Favorite Genre</h3>
+            <select id="newGenre" class="genre-select light-font">
+                <option value="0">Select a Genre...:</option>
+                    <option value="1">Action</option>
+                    <option value="3">Horror</option>
+                    <option value="5">Thriller</option>
+                    <option value="8">Drama</option>
+                    <option value="6">Sci-Fi</option>
+                    <option value="7">Comedy</option>
+                    <option value="4">Romance</option>
+                    <option value="10">Historical</option>
+                    <option value="9">Western</option>
+            </select>
+        </section>
+    </main>
+    <footer class="flex flex-center">
+        <button id="submitChanges" class="change-btn  light-button dark-font">Submit</button>
+    </footer>
+</body>
+</html>

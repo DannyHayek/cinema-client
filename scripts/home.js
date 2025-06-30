@@ -17,7 +17,7 @@ axios({
     console.log(response.data["movies"].length);
     for (let i = 0; i < response.data["movies"].length; i++){
        moviesGrid.innerHTML  += `
-            <article id="movie${response.data["movies"][i][0]}" class="movie-tile flex column flex-space-between">
+            <article id="${response.data["movies"][i][0]}" class="movie-tile flex column flex-space-between">
                 <h3 class="light-font">${response.data["movies"][i][1]}</h3>
                 <h5 class="light-font tile-bottom-text">${response.data["movies"][i][2]}</h5>
             </article>

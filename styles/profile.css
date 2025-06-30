@@ -58,78 +58,78 @@
 }
 
 main {
-    min-height: fit-content;
-    padding: 10%;
+    margin: 2em 0em;
+    max-height: 70dvh;
 }
 
-.movie-tiles-section {
+.form-field {
+    min-width: 4rem;
+    max-width: 10rem;
+    border-radius: 6%;
+    background-color: rgba(39, 44, 55, 1);
+    height: 1.6em;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.prof-details {
+    width: 100%;
+    height: fit-content;
+    gap: 4rem;
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     /* grid-template-rows: repeat(auto-fill, minmax(150px, 1fr)); */
     grid-gap: 2px;
     height: fit-content;
     justify-items: center;
 }
 
-.tile-bottom-text {
-    display: none;
-    padding-bottom: 25%;
-    overflow:scroll;
+.prof-details section {
+    width: 20%;
+    gap: 2rem;
 }
 
-.movie-tile {
-    background-image:-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0) 50%, rgba(39, 44, 55, 0.99) 100%), URL("../assets/iron_man_3.webp");
-    color: white;
-    border: 1px solid black;
-    padding-top: 4%;
-    margin: 3%;
-    min-width: 2em;
+.prof-details h2 {
+    width: fit-content;
+    text-wrap: nowrap;
+}
+
+.genre-select {
     text-align: center;
-    background-position: 50%;
-    background-size: contain;
-    /* max-width: 12dvw; */
-    width: 234px;
-    height: 375px;
-    border-radius: 30px;
+    min-width: 4rem;
+    max-width: 10rem;
+    border-radius: 6%;
+    background-color: rgba(39, 44, 55, 1);
+    height: 1.6em;
 }
 
-.movie-tile:hover {
-    cursor: pointer;
+.change-btn {
+    width: 4em;
+    height: 2em;
+    border: #5D83BD;
+    border-radius: 20px;
 }
 
-.movie-tile:hover {
-    background-image:-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0.6) 50%, rgba(39, 44, 55, 0.99) 100%), URL("../assets/iron_man_3.webp");
-    font-size: 1.2em;
-}
-
-.movie-tile:hover h5 {
-    display: block;
+footer {
+    width: 100%;
 }
 
 @media (max-width: 1200px) {
-    .movie-tiles-section {
-        grid-template-columns: auto auto auto;
-    }
 }
 
 @media (max-width: 900px) {
     .home-nav {
         gap: 7%;
     }
-
-    .movie-tile {
-        width: 156px;
-        height: 250px;
-    }
-
-    .tile-bottom-text {
-        font-size: 0.6em;
-        padding-bottom: 15%;
-    }
 }
 
 @media (max-width: 600px) {
+    .prof-details {
+        grid-template-columns: auto auto;
+    }
+
     .home-nav {
         gap: 4%;
     }
@@ -138,13 +138,14 @@ main {
         padding: 10px 14px;
         font-size: 14px;
     }
-
-    .movie-tiles-section {
-        grid-template-columns: auto auto;
-    }
 }
 
 @media (max-width: 400px) {
+    
+    .prof-details {
+        grid-template-columns: auto;
+    }
+
     .home-nav {
         gap: 3%;
     }
@@ -152,9 +153,5 @@ main {
     .home-nav a {
         padding: 8px 12px;
         font-size: 11px;
-    }
-    
-    .movie-tiles-section {
-        grid-template-columns: auto;
     }
 }

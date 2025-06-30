@@ -2,7 +2,8 @@ header {
     max-width: 100dvw;
     text-align: center;
     padding: min(8%, 4em);
-    max-height: 150px;
+    max-height: 30rem;
+    margin-bottom: 2em;
 }
 
 .landing-heading-1 {
@@ -11,7 +12,8 @@ header {
 
 .landing-logo {
     height: auto;
-    max-width: 100%;
+    max-width: 50dvw;
+    min-width: 280px;
 }
 
 .landing-heading-2 {
@@ -98,6 +100,7 @@ main {
     background-color: rgba(39, 44, 55, 1);
     height: 1.6em;
     color: whitesmoke;
+    text-align: center;
 }
 
 .login-form {
