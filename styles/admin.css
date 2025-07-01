@@ -1,0 +1,132 @@
+.title-header {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.home-logo {
+    height: auto;
+    max-width: 10rem;
+    margin-right: -8%;
+}
+
+.home-nav {
+    border-bottom: 1px solid;
+    border-color: whitesmoke;
+    padding: 1.4rem 1.1rem;
+    gap: 20dvw;
+    background-color: #5D83BD;
+    overflow: hidden;
+}
+
+.home-nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 20px;
+}
+
+.home-nav a:hover {
+    background-color: whitesmoke;
+    color: #5D83BD;
+}
+
+.active-nav {
+    background-color: rgb(39, 44, 55);
+    color: white;
+}
+
+.home-nav-user {
+
+}
+
+.nav-elem {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.home-title {
+    text-align: center;
+    padding: 1.2rem 0px;
+}
+
+.home-subtitle {
+    text-align: center;
+}
+
+main {
+    width: 100%;
+}
+
+.admin-title {
+    width: 100%;
+    text-align: center;
+}
+
+.admin-buttons {
+    width: 100%;
+}
+
+.admin-table {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    border: 10px groove black;
+    background-color: aliceblue;
+}
+
+td, th {
+    border: 1px solid #bebcbc;
+    text-align: center;
+    padding: 10px;
+}
+
+th {
+    border-bottom: 3px solid black;
+}
+
+/* tr {
+    background-color: aliceblue;
+} */
+
+td:nth-child(even) {
+    background-color: lightblue;
+}
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 900px) {
+    .home-nav {
+        gap: 7%;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-nav {
+        gap: 4%;
+    }
+
+    .home-nav a {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-nav {
+        gap: 3%;
+    }
+
+    .home-nav a {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+}

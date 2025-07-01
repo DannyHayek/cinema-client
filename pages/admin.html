@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/admin.css"/>
+    <link rel="stylesheet" href="../styles/global.css"/>
+    <script type="module" src="../scripts/admin.js" defer></script>
+    <title>Panorama Cinemas - Admin</title>
+    <link rel="icon" type="image/x-icon" href="../assets/panorama_icon.png">
+</head>
+<body>
+    <header>
+        <section class="flex flex-space-between title-header">
+            <img class="home-logo" src="../assets/panorama_logo_trans.png" alt="PANORAMA Logo">
+            <h3 class="light-font home-subtitle">The Home of Movies</h3>
+            <h4 class="light-font home-nav-user" id="welcomeMessage">Welcome, User</h4>
+        </section>
+        
+        <div class="home-nav flex flex-center" id="homeNav">
+            <a class="light-font" href="home.html">Movies</a>
+            <a class="light-font" href="">Showtimes</a>
+            <a class="light-font" href="profile.html">Profile</a>
+            <a class="light-font" href="../index.html">Logout</a>
+        </div>
+    </header>
+
+    <main class="flex column flex-center">
+        <section class="admin-title">
+            <h2 class="light-font">Admin Panel</h2>
+        </section>
+
+        <section class="admin-buttons flex flex-space-evenly">
+            <button>Movies</button>
+            <button>Users</button>
+            <button>Showtimes</button>
+        </section>
+
+        <section class="admin-table flex flex-center">
+            <table id="admin-table">
+                <tr class="table-headers">
+                    <th class = "dark-font table-head">USERNAME</th>
+                    <th class = "dark-font table-head">PASSWORD</th>
+                    <th class = "dark-font table-head">SCORE QUIZ 1</th>
+                    <th class = "dark-font table-head">SCORE QUIZ 2</th>
+                    <th class = "dark-font table-head">SCORE QUIZ 3</th>
+                    <th class = "dark-font table-head">SCORE QUIZ 4</th>
+                </tr>
+
+                <tr class="table-data">
+                    <td class = "dark-font table-row">Danny</td>
+                    <td class = "dark-font table-row">***</td>
+                    <td class = "dark-font table-row">2/3</td>
+                    <td class = "dark-font table-row">0/3</td>
+                    <td class = "dark-font table-row">1/3</td>
+                    <td class = "dark-font table-row">3/3</td>
+                </tr>
+            </table>
+        </section>
+        
+    </main>
+</body>
+</html>
