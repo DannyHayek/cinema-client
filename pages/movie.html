@@ -25,19 +25,30 @@
         </div>
     </header>
 
-    <main class="flex flex-space-between">
+    <main class="flex flex-space-between column">
 
-        <img id="moviePoster" class="image-poster" src="../assets/iron_man_3.webp" alt="Iron Man 3">
+        <div class="flex flex-space-between">
+            <section id="moviePoster" class="image-poster">
+                <!-- Image Placeholder -->
+                <!-- <img class="image-poster" src="../assets/terminator2.jpg" alt="Iron Man 3"> -->
+            </section>
+            
 
-        <section class="flex column flex-space-between movie-info">
-            <h2 id="movieName" class="light-font">Movie Name</h2>
-            <p id="synopsis" class="light-font">Synopsis: </p>
-            <p id="cast" class="light-font">Cast: </h4>
-            <p id="runtime" class="light-font">Runtime: </h4>
-            <p id="ageRating" class="light-font">Age Rating: </h4>
-            <p id="genre" class="light-font">Genre: </h4>
-            <p id="trailerLink" class="light-font">Link to Trailer</h4>
-        </section>
+            <section class="flex column flex-space-between movie-info">
+                <h2 id="movieName" class="light-font">Movie Name</h2>
+                <p id="synopsis" class="light-font">Synopsis: </p>
+                <p id="cast" class="light-font">Cast: </h4>
+                <p id="runtime" class="light-font">Runtime: </h4>
+                <p id="ageRating" class="light-font">Age Rating: </h4>
+                <p id="genre" class="light-font">Genre: </h4> 
+                
+            </section>
+        </div>
+
+        <div id="trailerLink">
+            <a class="light-font movie-link" href="https://www.w3schools.com/">Link to Trailer</a>
+        </div>
+            
     </main>
 </body>
 </html>
