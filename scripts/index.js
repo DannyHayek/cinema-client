@@ -24,7 +24,8 @@ signupSwapBtn.addEventListener("click", signupSwap);
 signupBtn.addEventListener("click", signup);
 loginSwapBtn.addEventListener("click", loginSwap);
 
-setCurrentUser("","");
+localStorage.setItem("currentUser", "");
+localStorage.setItem("currentEmail", "");
 
 function login() {
     if (lgnEmail.value == "") {
@@ -113,5 +114,5 @@ function setCurrentUser (name, email) {
     localStorage.setItem("currentUser", name);
     localStorage.setItem("currentEmail", email);
 
-    window.location.href = "../pages/home.html";
+    window.location.href = "pages/home.html";
 }
