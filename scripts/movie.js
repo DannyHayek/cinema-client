@@ -8,6 +8,7 @@ const welcomeMessage = document.getElementById("welcomeMessage");
 welcomeMessage.textContent = "Welcome, " + currentUser;
 
 const curMovieID = localStorage.getItem("currentMovie");
+console.log("currentMovie");
 
 console.log(curMovieID);
 
@@ -29,6 +30,7 @@ axios({
                 id: curMovieID
             }
         }).then(function (response) {
+            console.log(response.data);
             const movie = response.data["movie"];
             const genreData = response.data["genre"];
             const actorsData = response.data["actor"];
