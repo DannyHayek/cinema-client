@@ -59,15 +59,28 @@
 
 main {
     width: 100%;
+    gap: 2.5rem;
 }
 
 .admin-title {
+    padding-top: 6%;
     width: 100%;
     text-align: center;
 }
 
-.admin-buttons {
+.admin-button-section {
     width: 100%;
+}
+
+.admin-buttons {
+    max-width: 20em;
+    width: 70%;
+    min-width: 8em;
+    max-height: 20rem;
+    min-height: 3rem;
+    border: 3px;
+    border-style: groove;
+    border-radius: 8%;
 }
 
 .admin-table {
