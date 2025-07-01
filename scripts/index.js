@@ -24,6 +24,8 @@ signupSwapBtn.addEventListener("click", signupSwap);
 signupBtn.addEventListener("click", signup);
 loginSwapBtn.addEventListener("click", loginSwap);
 
+setCurrentUser("","");
+
 function login() {
     if (lgnEmail.value == "") {
         console.log("Email missing!");

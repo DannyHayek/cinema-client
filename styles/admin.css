@@ -85,12 +85,13 @@ main {
 
 .admin-table {
     width: 100%;
+    margin-bottom: 100px;
 }
 
 table {
     border-collapse: collapse;
     width: 70%;
-    border: 10px groove black;
+    border: 8px groove black;
     background-color: aliceblue;
 }
 
@@ -98,15 +99,12 @@ td, th {
     border: 1px solid #bebcbc;
     text-align: center;
     padding: 10px;
+    
 }
 
 th {
     border-bottom: 3px solid black;
 }
-
-/* tr {
-    background-color: aliceblue;
-} */
 
 td:nth-child(even) {
     background-color: lightblue;
