@@ -44,6 +44,30 @@ function fetchUsers() {
 
 function fetchMovies() {
     console.log("Fetching movies...");
+
+    axios({
+            method: "get",
+            url: "http://localhost/cinema-server/controllers/getMovies.php",
+        }).then(function (response) {
+            console.log(response.data);
+            const users = response.data["movies"];
+
+            console.log(users);
+
+            for (let i = 0; i < users[0].length; i++) {
+                adminTable.innerHTML = `<tr class="table-headers">
+                                        <th class = "dark-font table-head">Movie ID</th>
+                                        <th class = "dark-font table-head">Name</th>
+                                        <th class = "dark-font table-head">Synopsis</th>
+                                        <th class = "dark-font table-head">Length</th>
+                                        <th class = "dark-font table-head">Age Rating</th>
+                                        <th class = "dark-font table-head">Trailer Link</th>
+                                    </tr>`
+                }
+                
+            generateRows(users);
+
+            });
 }
 
 function fetchShowtimes() {
@@ -51,19 +75,19 @@ function fetchShowtimes() {
 }
 
 function generateRows(data) {
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 1; i < data.length; i++) {
         let trID = "table-row" + i;
         console.log(data[i]);
 
         adminTable.innerHTML += `<tr id="${trID}" class = "table-row">
-                                    <td class = "dark-font table-data">${data[i][0]}</td>
-                                    <td class = "dark-font table-data">${data[i][1]}</td>
-                                    <td class = "dark-font table-data">${data[i][2]}</td>
-                                    <td class = "dark-font table-data">${data[i][3]}</td>
-                                    <td class = "dark-font table-data">${hidePass(data[i][4])}</td>
-                                    <td class = "dark-font table-data">${data[i][5]}</td>
-                                    <td class = "dark-font table-data">${data[i][6]}</td>
-                                </tr>`                       
+                                </tr>`
+
+        let curRow = document.getElementById(trID);
+
+        for (let j = 0; j < data[i].length; j++) {
+
+            curRow.innerHTML += `<td class = "dark-font table-data">${data[i][j]}</td>`   
+        }                    
         }
 }
 
