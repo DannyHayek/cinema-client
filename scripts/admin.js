@@ -36,7 +36,7 @@ function fetchUsers() {
                                     </tr>`
                 }
                 
-            generateRows(users);
+            generateRows(users, true);
 
             });
 }
@@ -50,11 +50,11 @@ function fetchMovies() {
             url: "http://localhost/cinema-server/controllers/getMovies.php",
         }).then(function (response) {
             console.log(response.data);
-            const users = response.data["movies"];
+            const movies = response.data["movies"];
 
-            console.log(users);
+            console.log(movies);
 
-            for (let i = 0; i < users[0].length; i++) {
+            for (let i = 0; i < movies[0].length; i++) {
                 adminTable.innerHTML = `<tr class="table-headers">
                                         <th class = "dark-font table-head">Movie ID</th>
                                         <th class = "dark-font table-head">Name</th>
@@ -65,7 +65,7 @@ function fetchMovies() {
                                     </tr>`
                 }
                 
-            generateRows(users);
+            generateRows(movies, false);
 
             });
 }
@@ -74,7 +74,7 @@ function fetchShowtimes() {
     console.log("Fetching showtimes...");
 }
 
-function generateRows(data) {
+function generateRows(data, isUsers) {
     for (let i = 1; i < data.length; i++) {
         let trID = "table-row" + i;
         console.log(data[i]);
@@ -86,7 +86,11 @@ function generateRows(data) {
 
         for (let j = 0; j < data[i].length; j++) {
 
-            curRow.innerHTML += `<td class = "dark-font table-data">${data[i][j]}</td>`   
+            if (isUsers && j == 4) {
+                curRow.innerHTML += `<td class = "dark-font table-data">${hidePass(data[i][4])}</td>`;
+            } else {
+                curRow.innerHTML += `<td class = "dark-font table-data">${data[i][j]}</td>`;
+            }
         }                    
         }
 }
