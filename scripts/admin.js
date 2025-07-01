@@ -4,7 +4,7 @@ const usersButton = document.getElementById("usersButton");
 const moviesButton = document.getElementById("moviesButton");
 const showtimesButton = document.getElementById("showtimesButton");
 
-const userTable = document.getElementById("admin-table");
+const adminTable = document.getElementById("admin-table");
 
 usersButton.addEventListener("click", fetchUsers);
 moviesButton.addEventListener("click", fetchMovies);
@@ -25,7 +25,7 @@ function fetchUsers() {
             console.log(users);
 
             for (let i = 0; i < users[0].length; i++) {
-                userTable.innerHTML = `<tr class="table-headers">
+                adminTable.innerHTML = `<tr class="table-headers">
                                         <th class = "dark-font table-head">User ID</th>
                                         <th class = "dark-font table-head">Name</th>
                                         <th class = "dark-font table-head">Email</th>
@@ -34,49 +34,12 @@ function fetchUsers() {
                                         <th class = "dark-font table-head">Age</th>
                                         <th class = "dark-font table-head">Favorite Genre ID</th>
                                     </tr>`
-            }
-
-            for (let i = 0; i < users.length; i++) {
-                let trID = "table-row" + i;
-                console.log(users[i]);
-
-                userTable.innerHTML += `<tr id="${trID}" class = "table-row">
-                                            <td class = "dark-font table-data">${users[i][0]}</td>
-                                            <td class = "dark-font table-data">${users[i][1]}</td>
-                                            <td class = "dark-font table-data">${users[i][2]}</td>
-                                            <td class = "dark-font table-data">${users[i][3]}</td>
-                                            <td class = "dark-font table-data">${hidePass(users[i][4])}</td>
-                                            <td class = "dark-font table-data">${users[i][5]}</td>
-                                            <td class = "dark-font table-data">${users[i][6]}</td>
-                                        </tr>`
-
-                // let curRow = document.getElementById(trID);
-                // for (let j = 0; j < users[i].scores.length; j++) {
-                //     curRow.innerHTML += `<td class = "inquiz-text-font table-data">${users[i].scores[j]}/3</td>`
-                // }                            
                 }
+                
+            generateRows(users);
+
             });
 }
-
-/* <table id="admin-table">
-                <tr class="table-headers">
-                    <th class = "dark-font table-head">USERNAME</th>
-                    <th class = "dark-font table-head">PASSWORD</th>
-                    <th class = "dark-font table-head">SCORE QUIZ 1</th>
-                    <th class = "dark-font table-head">SCORE QUIZ 2</th>
-                    <th class = "dark-font table-head">SCORE QUIZ 3</th>
-                    <th class = "dark-font table-head">SCORE QUIZ 4</th>
-                </tr>
-
-                <tr class="table-data">
-                    <td class = "dark-font table-row">Danny</td>
-                    <td class = "dark-font table-row">***</td>
-                    <td class = "dark-font table-row">2/3</td>
-                    <td class = "dark-font table-row">0/3</td>
-                    <td class = "dark-font table-row">1/3</td>
-                    <td class = "dark-font table-row">3/3</td>
-                </tr>
-            </table>  */
 
 
 function fetchMovies() {
@@ -87,6 +50,22 @@ function fetchShowtimes() {
     console.log("Fetching showtimes...");
 }
 
+function generateRows(data) {
+    for (let i = 0; i < data.length; i++) {
+        let trID = "table-row" + i;
+        console.log(data[i]);
+
+        adminTable.innerHTML += `<tr id="${trID}" class = "table-row">
+                                    <td class = "dark-font table-data">${data[i][0]}</td>
+                                    <td class = "dark-font table-data">${data[i][1]}</td>
+                                    <td class = "dark-font table-data">${data[i][2]}</td>
+                                    <td class = "dark-font table-data">${data[i][3]}</td>
+                                    <td class = "dark-font table-data">${hidePass(data[i][4])}</td>
+                                    <td class = "dark-font table-data">${data[i][5]}</td>
+                                    <td class = "dark-font table-data">${data[i][6]}</td>
+                                </tr>`                       
+        }
+}
 
 function hidePass(pass) {
     let starred = ""
