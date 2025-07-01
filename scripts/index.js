@@ -114,5 +114,9 @@ function setCurrentUser (name, email) {
     localStorage.setItem("currentUser", name);
     localStorage.setItem("currentEmail", email);
 
-    window.location.href = "pages/home.html";
+    if (name == "admin") {
+        window.location.href = "pages/admin.html";
+    } else {
+        window.location.href = "pages/home.html";
+    }
 }

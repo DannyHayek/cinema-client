@@ -32,6 +32,7 @@ function fetchUsers() {
                                         <th class = "dark-font table-head">Phone Number</th>
                                         <th class = "dark-font table-head">Password</th>
                                         <th class = "dark-font table-head">Age</th>
+                                        <th class = "dark-font table-head">Favorite Genre</th>
                                         <th class = "dark-font table-head">Favorite Genre ID</th>
                                     </tr>`
                 }
