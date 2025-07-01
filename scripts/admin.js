@@ -63,6 +63,7 @@ function fetchMovies() {
                                         <th class = "dark-font table-head">Length</th>
                                         <th class = "dark-font table-head">Age Rating</th>
                                         <th class = "dark-font table-head">Trailer Link</th>
+                                        <th class = "dark-font table-head">Poster URL</th>
                                     </tr>`
                 }
                 
