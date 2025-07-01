@@ -126,4 +126,5 @@ async function updateUser (newAttr) {
 function resetField () {
     newName.value = newPass.value = newAge.value = newNumber.value = newEmail.value = "";
     newGenre.value = 0;
+    userPassword.innerHTML = "";
 }
