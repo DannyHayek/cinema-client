@@ -40,7 +40,7 @@ axios({
             synopsis.textContent = movie[2];
             runtime.textContent += movie[3] + " minutes";
             ageRating.textContent += movie[4];
-            trailerLink.textContent = movie[5];
+            trailerLink.innerHTML = `<a class="light-font movie-link" href="${movie[5]}">Link to Trailer</a>`;
 
             for (let i = 0; i < genreData.length; i++) {
                 console.log(genreData[i][1]);

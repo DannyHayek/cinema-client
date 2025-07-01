@@ -66,26 +66,41 @@ main {
 .image-poster {
     width: 19rem;
     height: auto;
+    margin-right: 10%;
 }
 
 .movie-info {
     margin-right: 1%;
-    gap: 10px;
+    gap: 5%;
 }
 
 .movie-info h2 {
     font-size: 5em;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .movie-info h4 {
     font-size: 3em;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .movie-info p {
     font-size: 2em;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.movie-link {
+    font-size: 1em;
+}
+
+.movie-link:hover {
+    color: gray;
 }
 
 @media (max-width: 1200px) {
@@ -155,7 +170,7 @@ main {
     }
 
     .image-poster {
-        width: 13rem;
+        width: 11rem;
         height: auto;
     }
 
@@ -177,6 +192,10 @@ main {
         font-size: 1em;
         text-align: center;
     }
+
+    .movie-link {
+        font-size: 0.8em;
+    }
 }
 
 @media (max-width: 400px) {
@@ -190,7 +209,7 @@ main {
     }
 
     .image-poster {
-        width: 10rem;
+        width: 7rem;
         height: auto;
     }
 
@@ -199,17 +218,21 @@ main {
     }
 
     .movie-info h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
         text-align: center;
     }
 
     .movie-info h4 {
-        font-size: 1.1em;
+        font-size: 1.0.5em;
         text-align: center;
     }
 
     .movie-info p {
-        font-size: 1em;
+        font-size: 0.95em;
         text-align: center;
+    }
+
+    .movie-link {
+        font-size: 0.5em;
     }
 }
