@@ -11,21 +11,21 @@ const moviesGrid = document.getElementById("moviesGrid");
 
 axios({
         method: "get",
-        url: "http://localhost/cinema-server/controllers/getMovies.php",
+        url: "http://localhost/cinema-server/get_movies",
     }
 ).then(function (response) {
-    console.log(response.data["movies"]);
-    for (let i = 0; i < response.data["movies"].length; i++){
-       let curMovieID = response.data["movies"][i][0];
+    console.log(response.data);
+    for (let i = 0; i < response.data["payload"].length; i++){
+       let curMovieID = response.data["payload"][i][0];
        moviesGrid.innerHTML  += `
             <article id="${curMovieID}" class="movie-tile flex column flex-space-between">
-                <h3 class="light-font">${response.data["movies"][i][1]}</h3>
-                <h5 class="light-font tile-bottom-text">${response.data["movies"][i][2]}</h5>
+                <h3 class="light-font">${response.data["payload"][i][1]}</h3>
+                <h5 class="light-font tile-bottom-text">${response.data["payload"][i][2]}</h5>
             </article>
         ` 
 
         let curMovie = document.getElementById(curMovieID);
-        curMovie.style.backgroundImage = `-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0) 50%, rgba(39, 44, 55, 0.99) 100%), URL("${response.data["movies"][i][6]}")`;
+        curMovie.style.backgroundImage = `-webkit-linear-gradient(bottom, rgba(39, 44, 55, 0) 50%, rgba(39, 44, 55, 0.99) 100%), URL("${response.data["payload"][i][6]}")`;
         
     }
 }).then(function (e) {
