@@ -32,9 +32,9 @@ axios({
         }).then(function (response) {
             console.log(response.data);
             const movie = response.data["payload"];
-            
-            const genreData = response.data["genre"];
-            const actorsData = response.data["actor"];
+
+            const genreData = response.data["payload"][7];
+            const actorsData = response.data["payload"][8];
 
             console.log(movie);
             console.log(genreData);
