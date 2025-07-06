@@ -39,23 +39,24 @@ resetField();
 function fetchInfo () {
     axios({
             method: "get",
-            url: "http://localhost/cinema-server/get_users",
+            url: "http://localhost/cinema-server/get_users?",
             params: {
                 email: currentEmail
             }
         }).then(function (response) {
-            console.log(response.data);
-            userID =  response.data[0];
-            userName.textContent = response.data[1];
-            userEmail.textContent = response.data[2];
-            userNumber.textContent = response.data[3];
-            userAge.textContent = response.data[5];
+            console.log(response.data["payload"]);
+            
+            userID =  response.data["payload"][0];
+            userName.textContent = response.data["payload"][1];
+            userEmail.textContent = response.data["payload"][2];
+            userNumber.textContent = response.data["payload"][3];
+            userAge.textContent = response.data["payload"][5];
 
-            userGenreID = response.data[7];
-            console.log(response.data[4]);
-            currentPass = response.data[4];
+            userGenreID = response.data["payload"][7];
+            console.log(response.data["payload"][4]);
+            currentPass = response.data["payload"][4];
 
-            for (let i = 0; i < response.data[4].length; i++) {
+            for (let i = 0; i < response.data["payload"][4].length; i++) {
                 userPassword.textContent += "*";
             }
 
