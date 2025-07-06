@@ -39,7 +39,7 @@ resetField();
 function fetchInfo () {
     axios({
             method: "get",
-            url: "http://localhost/cinema-server/controllers/getUsers.php?",
+            url: "http://localhost/cinema-server/get_users",
             params: {
                 email: currentEmail
             }
@@ -114,7 +114,7 @@ async function updateUser (newAttr) {
     console.log(params);
     resetField();
 
-    axios.post("http://localhost/cinema-server/controllers/updateUser.php", params)
+    axios.post("http://localhost/cinema-server/update_user", params)
     .then(response => console.log(response)).then(error => console.log(error))
     .then(console.log("User successfully updated!"));
 

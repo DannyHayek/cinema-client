@@ -17,7 +17,7 @@ function fetchUsers() {
 
     axios({
             method: "get",
-            url: "http://localhost/cinema-server/controllers/getUsers.php",
+            url: "http://localhost/cinema-server/get_users",
         }).then(function (response) {
             console.log(response.data);
             const users = response.data["users"];
