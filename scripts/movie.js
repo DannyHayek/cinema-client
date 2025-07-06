@@ -25,15 +25,16 @@ const moviePoster = document.getElementById("moviePoster");
 
 axios({
             method: "get",
-            url: "http://localhost/cinema-server/controllers/getMovies.php?",
+            url: "http://localhost/cinema-server/get_movies?",
             params: {
                 id: curMovieID
             }
         }).then(function (response) {
             console.log(response.data);
-            const movie = response.data["movie"];
-            const genreData = response.data["genre"];
-            const actorsData = response.data["actor"];
+            const movie = response.data["payload"];
+
+            const genreData = response.data["payload"][7];
+            const actorsData = response.data["payload"][8];
 
             console.log(movie);
             console.log(genreData);

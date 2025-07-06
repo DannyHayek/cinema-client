@@ -17,10 +17,10 @@ function fetchUsers() {
 
     axios({
             method: "get",
-            url: "http://localhost/cinema-server/controllers/getUsers.php",
+            url: "http://localhost/cinema-server/get_users",
         }).then(function (response) {
             console.log(response.data);
-            const users = response.data["users"];
+            const users = response.data["payload"];
 
             console.log(users);
 
@@ -32,7 +32,6 @@ function fetchUsers() {
                                         <th class = "dark-font table-head">Phone Number</th>
                                         <th class = "dark-font table-head">Password</th>
                                         <th class = "dark-font table-head">Age</th>
-                                        <th class = "dark-font table-head">Favorite Genre</th>
                                         <th class = "dark-font table-head">Favorite Genre ID</th>
                                     </tr>`
                 }
@@ -48,10 +47,10 @@ function fetchMovies() {
 
     axios({
             method: "get",
-            url: "http://localhost/cinema-server/controllers/getMovies.php",
+            url: "http://localhost/cinema-server/get_movies",
         }).then(function (response) {
             console.log(response.data);
-            const movies = response.data["movies"];
+            const movies = response.data["payload"];
 
             console.log(movies);
 
