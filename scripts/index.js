@@ -47,11 +47,11 @@ function login() {
             }
         }).then(function (response) {
             console.log(response.data);
-            if (response.data[2] == curEmail) {
-                if (response.data[4] == curPass){
-                    console.log(response.data[4]);
+            if (response.data["payload"][2] == curEmail) {
+                if (response.data["payload"][4] == curPass){
+                    console.log(response.data["payload"][4]);
                     console.log("Password correct! Logging in...");
-                    setCurrentUser(response.data[1], response.data[2]);
+                    setCurrentUser(response.data["payload"][1], response.data["payload"][2]);
                 } else if (response.data[4] != curPass){;
                 console.log("Incorrect password!");
             } else {
@@ -96,7 +96,7 @@ function signup () {
     params.append("phone_number", curNumber);
     params.append("password", curPass);
     params.append("age", 0)
-    params.append("favGenre", curGenre);
+    params.append("favorite_genre_id", curGenre);
 
     axios.post("http://localhost/cinema-server/signup", params)
     .then(response => console.log(response)).then(error => console.log(error))
